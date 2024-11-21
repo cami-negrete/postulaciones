@@ -1,6 +1,8 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: %i[ show edit update destroy ]
 
+  before_action :only_admin, only: %i[ new create ]
+
   # GET /offers or /offers.json
   def index
     @offers = Offer.all

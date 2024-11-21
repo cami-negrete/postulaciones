@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'postulation/create'
+  get 'postulation/destroy'
   namespace :admin do
     resources :users, only: [:new, :create]
     
