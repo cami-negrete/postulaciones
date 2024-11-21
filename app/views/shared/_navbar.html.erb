@@ -17,9 +17,11 @@
           <li class="nav-item">
             <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link' %>
           </li>
+          <%if User.count == 0 %>
           <li class="nav-item">
             <%= link_to 'Registro', new_user_registration_path, class: 'nav-link' %>
           </li>
+          <% end %>
         <% end %>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>

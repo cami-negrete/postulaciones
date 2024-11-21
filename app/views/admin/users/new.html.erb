@@ -1,0 +1,32 @@
+<h3 class="my-5">Crea un usuario</h3>
+
+<%= form_with model: @user, url: admin_users_path, local: true do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nombre' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, 'Correo Electrónico' %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password, 'Contraseña' %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation, 'Confirmación de Contraseña' %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar, 'Avatar (URL)' %>
+    <%= form.text_field :avatar %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit 'Crear Usuario' %>
+  </div>
+<% end %>
